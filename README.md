@@ -5,3 +5,6 @@ text on http://mapy.cz/ .
 
 It just opens new tab with the http://mapy.cz/ search result.
 
+## Screenshot
+
+![Screenshot](/screenshot.png?raw=true "Screenshot")
