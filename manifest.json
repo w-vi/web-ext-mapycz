@@ -1,16 +1,17 @@
 {
-  "name": "Find on mapy.cz",
-  "description": "Find selected text on mapy.cz",
-  "version": "0.0.1",
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDesc__",
+    "version": "0.0.1",
+    "default_locale": "en", 
     "permissions": ["contextMenus"],
     "icons": {
-          "16": "mapycz-tiny.png",
-          "48": "mapycz-small.png",
-          "128": "mapycz-large.png"
-        },
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
-  },
-  "manifest_version": 2
+        "16": "mapycz-tiny.png",
+        "48": "mapycz-small.png",
+        "128": "mapycz-large.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "manifest_version": 2
 }

@@ -1,0 +1,16 @@
+{
+    "extName":{
+        "message": "Najít na mapy.cz",
+        "description" : "Extension name"
+    },
+
+    "extDesc": {
+        "message": "Najde vybraný text na mapy.cz",
+        "description" : "Extension name"
+    },
+
+    "title": {
+        "message": "Najít na mapy.cz",
+        "description" : "Menu item text"
+    }
+}

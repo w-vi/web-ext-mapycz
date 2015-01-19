@@ -1,7 +1,7 @@
 // Set up context menu at install time.
 chrome.runtime.onInstalled.addListener(function() {
     var context = "selection";
-    var title = "Find on mapy.cz";
+    var title = chrome.i18n.getMessage("title");
     var id = chrome.contextMenus.create({"title": title, "contexts":[context],
                                          "id": "context" + context});  
 });
