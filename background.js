@@ -12,6 +12,6 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 // The onClicked callback function.
 function onClickHandler(info, tab) {
     var sText = info.selectionText;
-    var mapyURL = "http://mapy.cz/?q=" + encodeURIComponent(sText);
+    var mapyURL = "http://mapy.cz/zakladni?q=" + encodeURIComponent(sText);
     chrome.tabs.create({ url: mapyURL });
 };
