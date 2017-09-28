@@ -1,17 +1,27 @@
-// Set up context menu at install time.
-chrome.runtime.onInstalled.addListener(function() {
-    var context = "selection";
-    var title = chrome.i18n.getMessage("title");
-    var id = chrome.contextMenus.create({"title": title, "contexts":[context],
-                                         "id": "context" + context});
-});
+// Log creation status
+function onCreated() {
+  if (chrome.runtime.lastError) {
+    console.log(`Error: ${chrome.runtime.lastError}`);
+  } else {
+    console.log("Menu item mapycz-selection created.");
+  }
+}
 
-// add click event
-chrome.contextMenus.onClicked.addListener(onClickHandler);
+// Log all errors
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
 
-// The onClicked callback function.
-function onClickHandler(info, tab) {
+// Create the context menu item.
+chrome.contextMenus.create({
+  id: "mapycz-selection",
+  title: chrome.i18n.getMessage("title"),
+  contexts: ["selection"]
+}, onCreated);
+
+// Add click event
+chrome.contextMenus.onClicked.addListener((info, tab) => {
     var sText = info.selectionText;
     var mapyURL = "https://mapy.cz/?q=" + encodeURIComponent(sText);
     chrome.tabs.create({ url: mapyURL });
-};
+});
