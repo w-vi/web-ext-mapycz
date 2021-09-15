@@ -1,7 +1,7 @@
 {
     "name": "__MSG_extName__",
     "description": "__MSG_extDesc__",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "default_locale": "en",
     "permissions": ["contextMenus"],
     "icons": {
@@ -12,6 +12,14 @@
     "background": {
         "persistent": false,
         "scripts": ["background.js"]
+    },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "mapy.cz",
+            "search_url": "https://mapy.cz/?q={searchTerms}",
+            "keyword": "@mapy",
+            "favicon_url": "https://mapy.cz/img/favicon/favicon.ico"
+        }
     },
     "manifest_version": 2
 }
